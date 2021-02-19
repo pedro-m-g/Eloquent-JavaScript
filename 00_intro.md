@@ -1,31 +1,33 @@
 {{meta {load_files: ["code/intro.js"]}}}
 
-# Introduction
+# Introducción
 
 {{quote {author: "Ellen Ullman", title: "Close to the Machine: Technophilia and its Discontents", chapter: true}
 
-We think we are creating the system for our own purposes. We believe
-we are making it in our own image... But the computer is not really
-like us. It is a projection of a very slim part of ourselves: that
-portion devoted to logic, order, rule, and clarity.
+Pensamos que estamos creando el sistema para nuestros propios propósitos. Creemos que
+lo estamos haciendo a nuestra propia imagen... Pero la computadora no es realmente
+como nosotros. Es una proyección de una pequeñísima parte de nosotros: esa
+porción dedicada a la lógica, el orden, las reglas, y la claridad.
 
 quote}}
 
-{{figure {url: "img/chapter_picture_00.jpg", alt: "Picture of a screwdriver and a circuit board", chapter: "framed"}}}
+{{figure {url: "img/chapter_picture_00.jpg", alt: "Imagen de un destornillador y una placa de circuito", chapter: "framed"}}}
 
-This is a book about instructing ((computer))s. Computers are about as
-common as screwdrivers today, but they are quite a bit more complex,
-and making them do what you want them to do isn't always easy.
+Este es un libro sobre instruir ((computadora))s. Las computadoras son casi tan
+comunes como los destornilladores hoy en día, pero son bastante más complejas,
+y ponerlas a hacer lo que quieres que hagan no siempre es tarea sencilla.
 
-If the task you have for your computer is a common, well-understood
-one, such as showing you your email or acting like a calculator, you
-can open the appropriate ((application)) and get to work. But for
-unique or open-ended tasks, there probably is no application.
+Si la tarea que tienes para tu computadora es una común, bien definida,
+como mostrarte tu correo electrónico o actuar como una calculadora,
+puedes abrir la ((aplicación)) apropiada y ponerla a trabajar. Pero para
+tareas únicas o abiertas, probablemente aún no exista tal aplicación.
 
-That is where ((programming)) may come in. _Programming_ is the act of
-constructing a _program_—a set of precise instructions telling a
-computer what to do. Because computers are dumb, pedantic beasts,
-programming is fundamentally tedious and frustrating.
+Ahí es donde la ((programación)) puede entrar en juego. _Programar_ es la acción de
+construir un _programa_—un conjunto de instrucciones precisas que le dicen a la
+computadora qué hacer. Dado que las computadoras son bestias tontas y pedantes,
+la programación es fundamentalmente tediosa y frustrante.
+
+<!-- TODO: Continuar aqui -->
 
 {{index [programming, "joy of"], speed}}
 
