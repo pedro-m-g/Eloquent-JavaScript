@@ -27,93 +27,91 @@ construir un _programa_—un conjunto de instrucciones precisas que le dicen a l
 computadora qué hacer. Dado que las computadoras son bestias tontas y pedantes,
 la programación es fundamentalmente tediosa y frustrante.
 
-<!-- TODO: Continuar aqui -->
-
 {{index [programming, "joy of"], speed}}
 
-Fortunately, if you can get over that fact, and maybe even enjoy the rigor
-of thinking in terms that dumb machines can deal with, programming can
-be rewarding. It allows you to do things in seconds that would take
-_forever_ by hand. It is a way to make your computer tool
-do things that it couldn't do before. And it provides a wonderful
-exercise in abstract thinking.
+Afortunadamente, si puedes pasar eso por alto, y tal vez incluso disfrutes del rigor
+de pensar en términos que las máquinas tontas puedan trabajar, la programación puede ser
+gratificante. Te permite hacer en segundos cosas que tomarían
+_todo el tiempo_ haciéndolas manualmente. Es una forma de poner tu herramienta, la computadora,
+a hacer cosas que no podía hacer antes. Además proporciona un maravilloso
+ejercicio de pensamiento abstracto.
 
-Most programming is done with ((programming language))s. A _programming
-language_ is an artificially constructed language used to instruct
-computers. It is interesting that the most effective way we've found
-to communicate with a computer borrows so heavily from the way we
-communicate with each other. Like human languages, computer languages
-allow words and phrases to be combined in new ways, making it possible to
-express ever new concepts.
+La mayoría de la programación se hace con ((lenguajes de programación)). Un _lenguaje
+de programación_ es un lenguaje construido artificialmente utilizado para instruir
+computadoras. Es interesante que la manera más efectiva que hemos encontrado
+para comunicarnos con una computadora sea tan similar a la manera en la que nos
+comunicamos entre nosotros. Al igual que los lenguajes humanos, los lenguajes de computadora
+permiten que las palabras y frases se combinen de nuevas formas, haciendo posible
+la expresión de más y más conceptos nuevos.
 
 {{index [JavaScript, "availability of"], "casual computing"}}
 
-At one point language-based interfaces, such as the BASIC and DOS
-prompts of the 1980s and 1990s, were the main method of interacting with
-computers. They have largely been replaced with visual interfaces,
-which are easier to learn but offer less freedom. Computer languages
-are still there, if you know where to look. One such language,
-JavaScript, is built into every modern web ((browser)) and is thus
-available on almost every device.
+En algún momento las interfaces basadas en lenguajes, como las terminales de BASIC y DOS
+de los 1980s y 1990s, donde el método principal de interactuar con
+las computadoras. Estas han sido en su mayoría remplazadas por interfaces visuales,
+que son más sencillas de aprender pero ofrecen menos libertad. Los lenguajes de computadora
+siguen ahí, si sabes donde buscar. Uno de esos lenguajes,
+JavaScript, está integrado en todos los ((navegadores)) web modernos y por lo tanto
+está disponible en casi todos los dispositivos.
 
 {{indexsee "web browser", browser}}
 
-This book will try to make you familiar enough with this language to
-do useful and amusing things with it.
+Este libro intentará familiarizarte lo suficiente con este lenguaje para
+hacer cosas útiles y asombrosas con él.
 
-## On programming
+## Sobre la programación
 
 {{index [programming, "difficulty of"]}}
 
-Besides explaining JavaScript, I will introduce the basic
-principles of programming. Programming, it turns out, is hard. The
-fundamental rules are simple and clear, but programs built on top of
-these rules tend to become complex enough to introduce their own rules
-and complexity. You're building your own maze, in a way, and you might
-just get lost in it.
+Además de explicar JavaScript, introduciré los principios
+básicos de la programación. Sucede que programar es difícil. Las
+reglas fundamentales son claras y simples, pero los programas construidos sobre
+estas reglas tienden a hacerse lo suficientemente complejas como para introducir sus propias reglas
+y complejidad. Estás construyendo tu propio laberinto, de cierta forma, y podrías
+simplemente perderte en él.
 
 {{index learning}}
 
-There will be times when reading this book feels terribly frustrating.
-If you are new to programming, there will be a lot of new material to
-digest. Much of this material will then be _combined_ in ways that
-require you to make additional connections.
+Habrá momentos en los que leer este libro se sentirá terriblemente frustrante.
+Si eres nuevo en la programación, habrá un montón de material nuevo por
+digerir. Mucho de este material será _combinado_ de maneras que
+requieren de realizar conexiones adicionales.
 
-It is up to you to make the necessary effort. When you are struggling
-to follow the book, do not jump to any conclusions about your own
-capabilities. You are fine—you just need to keep at it. Take a break,
-reread some material, and make sure you read and understand the
-example programs and ((exercises)). Learning is hard work, but
-everything you learn is yours and will make subsequent learning
-easier.
+Está en ti realizar el esfuerzo necesario. Cuando tengas dificultades
+para seguir el libro, no saltes a ninguna conclusión sobre tus propias
+capacidades. Estás bien—solo necesitas perseverar. Toma un descanso,
+vuelve a leer parte del material, y asegúrate de que lees y entiendes los
+programas de ejemplo y los ((ejercicios)). Aprender es un trabajo duro, pero
+todo lo que aprendas es tuyo y hará que el siguiente aprendizaje
+sea más fácil.
 
 {{quote {author: "Ursula K. Le Guin", title: "The Left Hand of Darkness"}
 
 {{index "Le Guin, Ursula K."}}
 
-When action grows unprofitable, gather information; when information
-grows unprofitable, sleep.
+Cuando la acción se vuelve improductiva, reúne información; cuando la información
+se vuelve improductiva, duerme.
 
 quote}}
 
 {{index [program, "nature of"], data}}
 
-A program is many things. It is a piece of text typed by a programmer,
-it is the directing force that makes the computer do what it does, it
-is data in the computer's memory, yet it controls the actions
-performed on this same memory. Analogies that try to compare programs
-to objects we are familiar with tend to fall short. A superficially
-fitting one is that of a machine—lots of separate parts tend to be
-involved, and to make the whole thing tick, we have to consider the
-ways in which these parts interconnect and contribute to the operation
-of the whole.
+Un programa es muchas cosas. Es una pieza de texto escrita por un programador,
+es la fuerza que dirige, que pone a la computadora a hacer lo que hace, es
+la información en la memoria de la computadora, y, sin embargo, controla las acciones
+ejecutadas sobre esta misma memoria. Las analogías que intentan comparar programas
+con objetos con los que estamos familiarizados tienden a quedarse cortos. Una que superficialmente
+coincide es aquella con una máquina—montones de partes separadas suelen estar
+involucradas, y para echar a andar las cosas, tenemos que considerar las
+formas en las que estas partes se interconectan y contribuyen a la operación
+de la totalidad de la máquina.
 
-A ((computer)) is a physical machine that acts as a host for these immaterial
-machines. Computers themselves can do only stupidly straightforward
-things. The reason they are so useful is that they do these things at
-an incredibly high ((speed)). A program can ingeniously combine an
-enormous number of these simple actions to do very
-complicated things.
+Una ((computadora)) es una máquina física que actúa como hospedaje para estas máquinas
+inmateriales. Las computadoras por sí mismas solo pueden hacer cosas estúpidamente directas.
+La razón de que sean tan útiles es que hacen estas cosas a
+una ((velocidad)) increíblemente alta. Un programa puede copmbinar ingeniosamente un
+número enorme de estas acciones simples para hacer tareas
+muy complicadas.
 
 {{index [programming, "joy of"]}}
 
