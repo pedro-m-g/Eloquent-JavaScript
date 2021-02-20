@@ -115,40 +115,40 @@ muy complicadas.
 
 {{index [programming, "joy of"]}}
 
-A program is a building of thought. It is costless to build, it is
-weightless, and it grows easily under our typing hands.
+Un programa es una construcción del pensamiento. Construirlo no tiene un costo, no
+tiene peso, y crece fácilmente bajo nuestras manos que lo escriben.
 
-But without care, a program's size and ((complexity)) will grow out of
-control, confusing even the person who created it. Keeping programs
-under control is the main problem of programming. When a program
-works, it is beautiful. The art of programming is the skill of
-controlling complexity. The great program is subdued—made simple in
-its complexity.
+Pero si no se tiene cuidado, el tamaño de un programa y su ((complejidad)) crecerá fuera de
+control, confundiendo aún a la persona que lo creó. Mantener los programas
+bajo control es el problema principal de la programación. Cuando un programa
+funciona, es hermoso. El arte de la programación es la habilidad de
+controlar la complejidad. El gran programa es domado—simplificando
+su complejidad.
 
 {{index "programming style", "best practices"}}
 
-Some programmers believe that this complexity is best managed by using
-only a small set of well-understood techniques in their programs. They
-have composed strict rules ("best practices") prescribing the form
-programs should have and carefully stay within their safe little
-zone.
+Algunos programadores creen que esta complejidad se maneja mejor usando
+solo un conjunto pequeño de técnicas conocidas en sus programas. Han
+construido reglas estrictas ("buenas prácticas") que prescriben la forma
+que los programas deberían tener y mantenerse cuidadosamente dentro de su pequeña
+zona segura.
 
 {{index experiment}}
 
-This is not only boring, it is ineffective. New problems often
-require new solutions. The field of programming is young and still
-developing rapidly, and it is varied enough to have room for wildly
-different approaches. There are many terrible mistakes to make in
-program design, and you should go ahead and make them so that you
-understand them. A sense of what a good program looks like is
-developed in practice, not learned from a list of rules.
+Esto no solo es aburrido, no es efectivo. Los nuevos problemas a menudo
+requieren de nuevas soluciones. El campo de la programación es joven y aún
+se desarrolla rápidamente, y es lo suficientemente variada como para dar lugar a estrategias
+radicalmente distintas. Hay muchos errores terribles que se pueden hacer
+en el diseño de programas, y deberías adelantarte a cometerlos para que los
+puedas entender. Un instinto de cómo debe ser un buen programa se
+desarrolla con la práctica, no se aprende de una lista de reglas.
 
-## Why language matters
+## ¿Por qué importa el lenguaje?
 
 {{index "programming language", "machine code", "binary data"}}
 
-In the beginning, at the birth of computing, there were no programming
-languages. Programs looked something like this:
+Al inicio, en el nacimiento de la computación, no había lenguajes
+de programación. Los programas eran más o menos así:
 
 ```{lang: null}
 00110001 00000000 00000000
@@ -164,75 +164,75 @@ languages. Programs looked something like this:
 
 {{index [programming, "history of"], "punch card", complexity}}
 
-That is a program to add the numbers from 1 to 10 together and print
-out the result: `1 + 2 + ... + 10 = 55`. It could run on a simple,
-hypothetical machine. To program early computers, it was necessary to
-set large arrays of switches in the right position or punch holes in
-strips of cardboard and feed them to the computer. You can probably
-imagine how tedious and error-prone this procedure was. Even writing
-simple programs required much cleverness and discipline. Complex ones
-were nearly inconceivable.
+Ese es un programa para sumar los números del 1 al 10 e imprimir
+el resultado: `1 + 2 + ... + 10 = 55`. Podía ejecutarse en una máquina,
+simple e hipotética. Para programar en las primeras computadoras, era necesario
+montar grandes arreglos de interruptores en la posición correcta o ponchar agujeros en
+tiras de cartón e ingresarlas a la computadora. Probablemente te puedes
+imaginar lo tedioso y propenso a errores de este procedimiento. Incluso para escribir
+programas simples se requería mucha destreza y disciplina. Los complejos
+eran prácticamente inconcebibles.
 
 {{index bit, "wizard (mighty)"}}
 
-Of course, manually entering these arcane patterns of bits (the ones
-and zeros) did give the programmer a profound sense of being a mighty
-wizard. And that has to be worth something in terms of job
-satisfaction.
+Por supuesto, ingresar manualmente estos patrones arcaicos de bits (unos
+y ceros) le daban al programador una profunda sensación de ser un poderoso
+hechicero. Y eso tuvo que valer bastante en términos de satisfacción
+laboral.
 
 {{index memory, instruction}}
 
-Each line of the previous program contains a single instruction. It
-could be written in English like this:
+Cada línea del programa anterior contiene una sola instrucción. Podría
+escribirse en español de esta forma:
 
- 1. Store the number 0 in memory location 0.
- 2. Store the number 1 in memory location 1.
- 3. Store the value of memory location 1 in memory location 2.
- 4. Subtract the number 11 from the value in memory location 2.
- 5. If the value in memory location 2 is the number 0,
-    continue with instruction 9.
- 6. Add the value of memory location 1 to memory location 0.
- 7. Add the number 1 to the value of memory location 1.
- 8. Continue with instruction 3.
- 9. Output the value of memory location 0.
+ 1. Guarda el número 0 en la posición de memoria 0.
+ 2. Guarda el número 1 en la posición de memoria 1.
+ 3. Guarda el valor de la posición de memoria 1 en la posición de memoria 2.
+ 4. Resta el número 11 del valor en la posición de memoria 2.
+ 5. Si el valor en la posición de memoria 2 es el número 0,
+    continúa con la instrucción 9.
+ 6. Suma el valor de la posición de memoria 1 a la posición de memoria cero 0.
+ 7. Suma el número 1 al valor de la posición de memoria 1.
+ 8. Continúa con la instrucción 3.
+ 9. Imprime el valor de la posición de memoria 0.
 
 {{index readability, naming, binding}}
 
-Although that is already more readable than the soup of bits, it is
-still rather obscure. Using names instead of numbers for the
-instructions and memory locations helps.
+Aunque eso ya es más legible que la sopa de bits, todavía
+es un tanto opaco. Usar nombres en lugar de números para
+las instrucciones y posiciones de memoria puede ayudar.
 
 ```{lang: "text/plain"}
- Set “total” to 0.
- Set “count” to 1.
+ Asignar a “total” el valor 0.
+ Asignar a “count” el valor 1.
 [loop]
- Set “compare” to “count”.
- Subtract 11 from “compare”.
- If “compare” is zero, continue at [end].
- Add “count” to “total”.
- Add 1 to “count”.
- Continue at [loop].
+ Asignar a “compare” el valor “count”.
+ Restar 11 de “compare”.
+ Si “compare” es cero, continuar en [end].
+ Sumar “count” a “total”.
+ Sumar 1 a “count”.
+ Continuar en [loop].
 [end]
- Output “total”.
+ Imprimir “total”.
 ```
 
 {{index loop, jump, "summing example"}}
 
-Can you see how the program works at this point? The first two lines
-give two memory locations their starting values: `total` will be used
-to build up the result of the computation, and `count` will keep track
-of the number that we are currently looking at. The lines using
-`compare` are probably the weirdest ones. The program wants to see
-whether `count` is equal to 11 to decide whether it can stop
-running. Because our hypothetical machine is rather primitive, it can
-only test whether a number is zero and make a decision based
-on that. So it uses the memory location labeled `compare` to compute
-the value of `count - 11` and makes a decision based on that value.
-The next two lines add the value of `count` to the result and
-increment `count` by 1 every time the program has decided that `count`
-is not 11 yet.
+¿Puedes ver cómo trabaja el programa ahora? Las primeras dos líneas
+asignan a dos posiciones de memoria sus valores iniciales: `total` será utilizado
+para construir el resultado de la computación, y `count` dará seguimiento
+del número que estamos procesando cada vez. Las líneas que usan
+`compare` son probablemente las más extrañas. El programa quiere saber
+si `count` es igual a 11 para decidir si puede detener
+su ejecución. Como nuestra máquina hipotética es bastante primitiva, solo puede
+preguntar si un número es cero y tomar una decisión basada
+en ello. Así que usa la posición de memoria con la etiqueta `compare` para calcular
+el valor de `count - 11` y toma una decisión basándose en ese valor.
+Las siguientes dos líneas suman el valor de `count` al resultado e
+incrementan `count` en 1 cada vez que el programa ha decidido que `count`
+aún no es igual a 11.
 
-Here is the same program in JavaScript:
+Aquí está ese mismo programa en JavaScript:
 
 ```
 let total = 0, count = 1;
@@ -246,27 +246,27 @@ console.log(total);
 
 {{index "while loop", loop, [braces, block]}}
 
-This version gives us a few more improvements. Most important, there
-is no need to specify the way we want the program to jump back and
-forth anymore. The `while` construct takes care of that. It continues
-executing the block (wrapped in braces) below it as long as the
-condition it was given holds. That condition is `count <= 10`, which
-means “_count_ is less than or equal to 10”. We no longer have to
-create a temporary value and compare that to zero, which was just an
-uninteresting detail. Part of the power of programming languages is
-that they can take care of uninteresting details for us.
+Esta version nos da unas cuantas mejoras. Sobre todo, no
+hay necesidad de especificar la forma en la que queremos que el programa salte hacia adelante y atrás
+de nuevo. La construcción `while` se encarga de eso. Continúa
+ejecutando el bloque (rodeado de llaves) que lse sigue mientras la
+condición que le asignaron sea verdadera. Esa condición es `count <= 10`, la cual
+significa “_count_ es menor o igual a 10”. Ya no necesitamos
+crear un valor temporal y comparar eso con cero, lo cual era solo un
+detalle irrelevante para el programa. Parte del poder de los lenguajes de programación es
+que pueden encargarse de detalles irrelevantes por nosotros.
 
 {{index "console.log"}}
 
-At the end of the program, after the `while` construct has finished,
-the `console.log` operation is used to write out the result.
+Al final del programa, después de que la contrucción `while` ha terminado,
+la operación `console.log` es utilizada para escribir el resultado en pantalla.
 
 {{index "sum function", "range function", abstraction, function}}
 
-Finally, here is what the program could look like if we happened to
-have the convenient operations `range` and `sum` available, which
-respectively create a ((collection)) of numbers within a range and
-compute the sum of a collection of numbers:
+Finalmente, aquí está una muestra de cómo podría verse el programa si contáramos
+con las operaciones convenientes `range` y `sum`, las cuales
+respectivamente crean una ((colección)) de números dentro del intervalo y
+calculan la suma de una colección de números:
 
 ```{startCode: true}
 console.log(sum(range(1, 10)));
@@ -275,23 +275,23 @@ console.log(sum(range(1, 10)));
 
 {{index readability}}
 
-The moral of this story is that the same program can be expressed in
-both long and short, unreadable and readable ways. The first version of the
-program was extremely obscure, whereas this last one is almost
-English: `log` the `sum` of the `range` of numbers from 1 to 10. (We
-will see in [later chapters](data) how to define operations like `sum`
-and `range`.)
+La moraleja de esta historia es que el mismo programa puede expresarse de
+forma larga o corta, legible o ilegible. La primer version del
+programa era extremadamente opaca, mientras que esta última está casi
+en inglés: `log` (imprime) la `sum` (suma) del `range` (intervalo) de números del 1 al 10. (En
+los [siguientes capítulos](data) veremos cómo definir operaciones como `sum`
+y `range`.)
 
 {{index ["programming language", "power of"], composability}}
 
-A good programming language helps the programmer by allowing them to
-talk about the actions that the computer has to perform on a higher
-level. It helps omit details, provides convenient building blocks
-(such as `while` and `console.log`), allows you to define your own
-building blocks (such as `sum` and `range`), and makes those blocks
-easy to compose.
+Un buen lenguaje de programación ayuda a los programadores permitiéndoles
+hablar sobre las acciones que la computadora tiene que realizar en un nivel más
+alto. Ayuda a omitir detalles, provee bloques de construcción convenientes
+(como `while` y `console.log`), te permite definir tus propios
+bloques de construcción (como `sum` y `range`), y hace que esos bloques
+sean fáciles de componer entre sí.
 
-## What is JavaScript?
+## ¿Qué es JavaScript?
 
 {{index history, Netscape, browser, "web application", JavaScript, [JavaScript, "history of"], "World Wide Web"}}
 
@@ -299,13 +299,13 @@ easy to compose.
 
 {{indexsee Web, "World Wide Web"}}
 
-JavaScript was introduced in 1995 as a way to add programs to web
-pages in the Netscape Navigator browser. The language has since been
-adopted by all other major graphical web browsers. It has made modern
-web applications possible—applications with which you can interact
-directly without doing a page reload for every action. JavaScript is also
-used in more traditional websites to provide various forms of
-interactivity and cleverness.
+JavaScript fue introducido en 1995 como una forma de agregar programas a las
+páginas web, en el navegador web Netscape Navigator. El lenguaje ha sido adoptado
+desde entonces por todos los demás navegadores web principales. Ha hecho posibles las
+aplicaciones web—aplicaciones con las que puedes interactuar
+directamente sin realizar una recarga de la página por cada acción. JavaScript también es
+utilizado en más sitios web tradicionales para proveer varias formas
+de interacción e inteligencia.
 
 {{index Java, naming}}
 
