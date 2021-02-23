@@ -309,60 +309,60 @@ de interacción e inteligencia.
 
 {{index Java, naming}}
 
-It is important to note that JavaScript has almost nothing to do with
-the programming language named Java. The similar name was inspired by
-marketing considerations rather than good judgment. When JavaScript
-was being introduced, the Java language was being heavily marketed and
-was gaining popularity. Someone thought it was a good idea to try to
-ride along on this success. Now we are stuck with the name.
+Es importante notar que JavaScript prácticamente no tiene nada que ver con
+el lenguaje de programación Java. El nombre similar fue inspirado en
+consideraciones de mercadotecnia más que por buen juicio. Cuando JavaScript
+estaba siendo introducido, el lenguaje Java estaba siendo fuertemente promocionado
+y ganando popularidad. A alguien se le ocurrió que sería buena idea intentar
+colgarse de este éxito. Y ahora nos quedamos con este nombre.
 
 {{index ECMAScript, compatibility}}
 
-After its adoption outside of Netscape, a ((standard)) document was
-written to describe the way the JavaScript language should work so
-that the various pieces of software that claimed to support JavaScript
-were actually talking about the same language. This is called the
-ECMAScript standard, after the Ecma International organization that
-did the standardization. In practice, the terms ECMAScript and
-JavaScript can be used interchangeably—they are two names for the same
-language.
+Después de su adopción fuera de Netscape, se escribió un documento ((estándar))
+para describir la manera en la que el lenguaje JavaScript debería trabajar, de tal forma que
+las diversas piezas de software que proclaman soportar JavaScript
+se refireran realmente al mismo lenguaje. Este estándar se llama
+ECMAScript, por la organización Ecma International que
+realizó la estandarización. En la práctica, los términos ECMAScript y
+JavaScript son intercambiables—son dos nombres para el mismo
+lenguaje.
 
 {{index [JavaScript, "weaknesses of"], debugging}}
 
-There are those who will say _terrible_ things about JavaScript. Many
-of these things are true. When I was required to write something in
-JavaScript for the first time, I quickly came to despise it. It would
-accept almost anything I typed but interpret it in a way that was
-completely different from what I meant. This had a lot to do with the
-fact that I did not have a clue what I was doing, of course, but there
-is a real issue here: JavaScript is ridiculously liberal in what it
-allows. The idea behind this design was that it would make programming
-in JavaScript easier for beginners. In actuality, it mostly makes
-finding problems in your programs harder because the system will not
-point them out to you.
+Hay algunas personas que dirán cosas _terrible_ sobre JavaScript. Muchas
+de estas cosas son ciertas. Cuando necesité escribir algo en
+JavaScript por primera vez, rápidamente empecé a odiarlo. Aceptaba
+prácticamente todo lo que escribia pero lo interpretaba de una forma que era
+completamente diferente de lo que quería decir. Esto tenía mucho que ver con el
+hecho de que yo no tenía ni idea de lo que estaba haciendo, claro, pero hay
+un problema real aquí: JavaScript es ridículamente liberal en lo que
+permite. La idea detrás de este diseño era hacer que la programación
+en JavaScript más fácil para los principiantes. En realidad, casi siempre hace
+más dificil encontrar los problemas en tus programas porque el sistema no te
+lo señalará.
 
 {{index [JavaScript, "flexibility of"], flexibility}}
 
-This flexibility also has its advantages, though. It leaves space for
-a lot of techniques that are impossible in more rigid languages, and
-as you will see (for example in [Chapter ?](modules)), it can be used
-to overcome some of JavaScript's shortcomings. After ((learning)) the
-language properly and working with it for a while, I have learned to
-actually _like_ JavaScript.
+Esta flexibilidad también tiene sus ventajas, cabe mencionar. Deja espacio para
+un montón de técnicas que son imposibles en lenguajes más rígidos, y
+como verás más adelante (por ejemplo en el [Chapter ?](modulos)), puede ser utilizado
+para solventar algunas de las limitaciones de JavaScript. Después de ((aprender)) el
+lenguaje de apropiadamente y trabajar con él por un tiempo, He aprendido
+a realmente _apreciar_ JavaScript.
 
 {{index future, [JavaScript, "versions of"], ECMAScript, "ECMAScript 6"}}
 
-There have been several versions of JavaScript. ECMAScript version 3
-was the widely supported version in the time of JavaScript's ascent to
-dominance, roughly between 2000 and 2010. During this time, work was
-underway on an ambitious version 4, which planned a number of radical
-improvements and extensions to the language. Changing a living, widely
-used language in such a radical way turned out to be politically
-difficult, and work on the version 4 was abandoned in 2008, leading to
-a much less ambitious version 5, which made only some uncontroversial
-improvements, coming out in 2009. Then in 2015 version 6 came out, a
-major update that included some of the ideas planned for version 4.
-Since then we've had new, small updates every year.
+Han existido varias versiones de JavaScript. La versión 3 de ECMAScript
+era la versión mayormente soportada en los tiempos en los que JavaScript aumentó
+su presencia, más o menos de 2000 a 2010. Durante este tiempo, se estaba trabajando
+en una ambiciosa version 4, que planeaba mejoras radicales numerosas
+y extensiones al lenguaje. Cambiar un lenguaje vivo, bastante utilizado
+de formas tan radicales resultó ser dificil políticamente,
+y el trabajo en la versión 4 fue abandonada en 2008, pero condujo a
+una versión 5 mucho menos ambiciosa, que solo realizó unas cuantas mejoras controversiales,
+haciendo su aparición en 2009. Luego en 2015 la versón 6 salió, una
+actualización extensa que incluyó algunas de las ideas planeadas para la versión 4.
+Desde entonceshemos tenido nuevas actualizaciones, más pequeñas, cada año.
 
 The fact that the language is evolving means that browsers have to
 constantly keep up, and if you're using an older browser, it may not
